@@ -1,0 +1,20 @@
+{
+  "11292" : {
+    "name" : "Манго",
+    "cost" : 12,
+    "description" : "Манго спелые, очень красивые",
+    "image" : "Images/Mango.png"
+  },
+  "11294" : {
+    "name" : "Бананы",
+    "cost" : 16,
+    "description" : "Желтые бананы, классные",
+    "image" : "Images/2.png"
+  },
+  "11295" : {
+    "name" : "Яблоки",
+    "cost" : 22,
+    "description" : "Спелые и сочные яблоки",
+    "image" : "Images/3.png"
+  }
+}

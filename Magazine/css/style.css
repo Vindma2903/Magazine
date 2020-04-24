@@ -1,0 +1,548 @@
+/*Стиль для авторизации */
+/*стиль для продуктов */
+.single-goods /*Стиль для рамки */
+{
+width: 200px;
+height: 200px;
+border: 1px solid black;
+margin: 10px;
+float: left;
+text-align: center;
+}
+
+.single-goods img /*Стиль для изображения */
+{
+  background-size: auto 100%;
+  width: 100px;
+  height: 100px;
+}
+
+
+.single-goods button
+{
+  display: block;
+  margin: 20px auto;
+}
+
+/*Стиль для шапки */
+.top-container {
+
+  padding: 30px;
+  text-align: center;
+  z-index: 3;
+  display: inline-block;
+}
+.header
+{
+  padding: 30px 16px;
+  z-index: 3;
+  display: inline-block;
+  background-color: beige;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+.main_photo1
+{
+  margin: 0; /*Убираем отступы в браузере */
+  height: 1024px;
+  border-bottom: 2px solid maroon;
+}
+
+/*Форма регистрации и авторизации*/
+@import url(http://fonts.googleapis.com/css?family=Raleway:700,800);
+
+html, body { margin: 0; }
+
+:focus { outline: none; }
+::-webkit-input-placeholder { color: #DEDFDF; }
+::-moz-placeholder { color: #DEDFDF; }
+:-moz-placeholder { color: #DEDFDF; }
+::-ms-input-placeholder { color: #DEDFDF; }
+
+body {
+  background: #3ABCB4;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+#wrapper, label, #arrow, button span { transition: all .5s cubic-bezier(.6,0,.4,1); }
+
+#wrapper { overflow: hidden; }
+
+#signin:checked ~ #wrapper { height: 178px; }
+#signin:checked ~ #wrapper #arrow { left: 32px; }
+#signin:checked ~ button span { transform: translate3d(0,-72px,0); }
+
+#signup:checked ~ #wrapper { height: 262px; }
+#signup:checked ~ #wrapper #arrow { left: 137px; }
+#signup:checked ~ button span { transform: translate3d(0,-144px,0); }
+
+#reset:checked ~ #wrapper { height: 94px; }
+#reset:checked ~ #wrapper #arrow { left: 404px; }
+#reset:checked ~ button span { transform: translate3d(0,0,0); }
+
+form {
+  width: 450px;
+  height: 370px;
+  margin: -185px -225px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+input[type=radio] { display: none; }
+
+label {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 800;
+  opacity: .5;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+label:hover {
+  transition: all .3s cubic-bezier(.6,0,.4,1);
+  opacity: 1;
+}
+label[for="signin"] { margin-right: 20px; }
+label[for="reset"] { float: right; }
+input[type=radio]:checked + label { opacity: 1; }
+
+input[type=text],
+input[type=password] {
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 27px;
+  font-family: 'Raleway', sans-serif;
+  height: 72px;
+  width: 99.5%;
+  margin-bottom: 10px;
+  opacity: 1;
+  text-indent: 20px;
+  transition: all .2s ease-in-out;
+}
+button {
+  background: #079BCF;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  font-size: 27px;
+  height: 72px;
+  width: 100%;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: all .3s cubic-bezier(.6,0,.4,1);
+}
+button span {
+  display: block;
+  line-height: 72px;
+  position: relative;
+  top: -2px;
+  transform: translate3d(0,0,0);
+}
+button:hover {
+  background: #007BA5;
+}
+
+#arrow {
+  height: 0;
+  width: 0;
+  border-bottom: 10px solid #fff;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  position: relative;
+  left: 32px;
+}
+
+
+#hint {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+}
+
+/*Стиль для выдвижного списка */
+ul.ddropdownn li {/* Считаем координаты относительно исходного места. */ position: relative; }
+ul.ddropdownn, ul.ddropdownn-inside {
+    /* Отступы на нуле. */
+    padding: 0;
+    /* Маркеры уберем. */
+    list-style-type: none;
+    }
+ul.ddropdownn-inside {
+    /* Спрячем дочерние элементы выпадающего списка. */
+    left: -9999px;
+    position: absolute;
+    }
+ul.ddropdownn li.ddropdownn-top {
+    /* Небольшой отступ. */
+    margin: 0 1px 0 0;
+    /* Выравнивание по левой стороне. */
+    float: left;
+    display: inline;
+    }
+ul.ddropdownn li.ddropdownn-top a {
+    /* Делаю элементы блочными. */
+    display: block;
+    /* Снова отступы. */
+    padding: 3px 10px 4px;
+    }
+ul.ddropdownn a.ddropdownn-top {/* Цвет фона. */ background: #efefef; }
+ul.ddropdownn a.ddropdownn-top:hover {/* Отступы. */ padding: 3px 10px 4px; }
+ul.ddropdownn li.ddropdownn-top:hover .ddropdownn-inside {
+    left: 0;
+    /* Делаю элементы блочными. */
+    display: block;
+    }
+ul.ddropdownn .ddropdownn-inside {/* Цвет фона. */ background: #ffffff; }
+ul.ddropdownn .ddropdownn-inside a:hover {/* Цвет фона изменится при наведении. */ background: #efefef; }
+
+
+.clear{
+
+
+
+    clear: both;
+
+
+
+}
+
+
+
+
+
+
+
+.mesage_error{
+
+
+
+    color: #cc0000;
+
+
+
+}
+
+
+
+
+
+
+
+.success_message{
+
+
+
+    color: green;
+
+
+
+}
+
+
+
+
+
+
+
+.block_for_messages{
+
+
+
+    text-align: center;
+
+
+
+}
+
+
+
+
+
+
+
+#header, #footer{
+
+
+
+    border: 2px solid #000;
+
+
+
+}
+
+
+
+
+
+
+
+#header{
+
+
+
+    padding-left: 10px;
+
+
+
+}
+
+
+
+
+
+
+
+#footer{
+
+
+
+    position: absolute;
+
+
+
+    bottom: 0;
+
+
+
+    right: 0;
+
+
+
+    width: 100%;
+
+
+
+}
+
+
+
+
+
+
+
+#header h2, #footer h2{
+
+
+
+    text-align: center;
+
+
+
+    margin: 0;
+
+
+
+}
+
+
+
+
+
+
+
+#auth_block{
+
+
+
+    width: 290px;
+
+
+
+    float: right;
+
+
+
+    text-align: center;
+
+
+
+}
+
+
+
+
+
+
+
+#auth_block a{
+
+
+
+    display: block;
+
+
+
+    padding: 10px;
+
+
+
+    border-radius: 10px;
+
+
+
+    color: #fff;
+
+
+
+    width: 110px;
+
+
+
+    height: 30px;
+
+
+
+    text-decoration: none;
+
+
+
+}
+
+
+
+
+
+
+
+#auth_block a:hover{
+
+
+
+    text-decoration: underline;
+
+
+
+}
+
+
+
+
+
+
+
+#link_register{
+
+
+
+    float: left;
+
+
+
+}
+
+
+
+
+
+
+
+#link_auth, #link_logout{
+
+
+
+    float: right;
+
+
+
+}
+
+
+
+
+
+
+
+#link_register a{
+
+
+
+    background: #54d854;
+
+
+
+}
+
+
+
+
+
+
+
+#link_auth a, #link_logout a{
+
+
+
+    background: #4e4eec;
+
+
+
+    text-align: center;
+
+
+
+}
+
+
+
+
+
+
+
+/* Блок с формой регистрации */
+
+
+
+#form_register, #form_auth{
+
+
+
+    width: 300px;
+
+
+
+    margin: 0 auto;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+#authorized h2{
+
+
+
+    text-align: center;
+
+
+
+}

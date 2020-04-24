@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Всё для выпечки | Интернет-магазин</title>
+<link rel="stylesheet" href="css\style.css"/>
+</head>
+<body>
+
+  <!--Шапка -->
+
+  <div  class="header" id="myHeader">
+  <div class="main-menu" style="position:absolute; top:0px;">
+
+  <p style="position:absolute; left:250px; top:10px;" href="#!"><nobr>ГЛАВНАЯ</nobr></p>
+  <p style="position:absolute; left:350px; top:10px;" href="#!">МАГАЗИН</p>
+  <p style="position:absolute; left:470px; top:10px;" href="#!"><nobr>ДОСТАВКА И ОПЛАТА</nobr></p>
+  <p style="position:absolute; left:680px; top:10px;" href="#!">ОФОРМИТЬ ЗАКАЗ</p>
+  <p style="position:absolute; left:790px; top:10px;" href="#!">КОНТАКТЫ</p>
+
+<p><a href="registration.html"><img src="Images\user.png"  alt="Вход" height="30px" width="30px" style="position:absolute; top:20px; left:1090px"></a></p>
+
+
+<p><a href="cart.html"><img src="Images\supermarket.png"  alt="Корзина" height="30px" width="30px" style="position:absolute; top:20px; left:1120px"></a></p>
+
+
+
+  <img class="logo" src="Image\лого.png" alt="Лого" height="150px" width="150px">
+  </div>
+  </div>
+
+
+  <!--Всё вне шапки должно быть тут -->
+<div style="position:absolute; top:100px;" class="content">
+<!--
+<img class="main_photo1" src="Images\9kdxDnvydKU (1).jpg" >
+-->
+<!--Каталог -->
+<ul class="ddropdownn">
+    <li class="ddropdownn-top">
+    <a class="ddropdownn-top" href="/">Каталог</a>
+        <ul class="ddropdownn-inside">
+          <li><a href="HTML\Baking_pans.html">Формы для выпечки</a></li>
+          <li><a href="HTML\Chocolate.html">Шоколад,глазурь,какао</a></li>
+          <li><a href="HTML\Food_coloring.html">Пищевые красители</a></li>
+          <li><a href="HTML\Pastry_sprinkles.html">Посыпки кондитерские</a></li>
+          <li><a href="HTML\Chocolate_molds.html">Формы для шоколада и конфет</a></li>
+        </ul>
+    </li>
+</ul>
+
+<form style="position:absolute; left:400px; top:220px;">
+<input type="search" name="text">
+<input type="submit" value="Найти">
+</form>
+
+<!--Выгрузка товаров
+<div id="mini-cart"></div>
+<div id="goods"></div>-->
+
+
+</div>
+<!--JS-->
+<!--Липкая шапка, перенести в файл -->
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
+<!--Подключение библиотеки от google jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!--Подключение файла js -->
+<script src="Js\magazine.js"></script>
+</body>
+</html>
